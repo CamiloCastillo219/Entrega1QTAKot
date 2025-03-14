@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Titulo_grande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/titulo"
+        android:textAlignment="center"
+        android:textColor="#078322"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_temperatura"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo_grande"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="serif"
+        android:text="@string/texto_de_media"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="40dp"
+        android:autofillHints=""
+        android:background="@drawable/edittext_border"
+        android:ems="10"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/Faren"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#078322"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/farenheits"
+        app:layout_constraintEnd_toStartOf="@+id/Kelv"
+        app:layout_constraintStart_toEndOf="@+id/Celsi"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+    <Button
+        android:id="@+id/Celsi"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#078322"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/celsius"
+        app:layout_constraintEnd_toStartOf="@+id/Faren"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+    <Button
+        android:id="@+id/Kelv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#078322"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/kelvin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Faren"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Kelv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="50dp">
+
+        <TableRow
+            android:background="#078322">
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/valor"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="@string/unidad"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow
+            android:background="#E0E0E0">
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="24sp"
+                android:text=""
+                android:gravity="left"/>
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="left"
+                android:textSize="24sp"
+                android:text="@string/celsius" />
+        </TableRow>
+
+        <TableRow
+            android:background="#E0E0E0">
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text=""
+                android:textSize="24sp"
+                android:gravity="left" />
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/farenheits"
+                android:textSize="24sp"
+                android:gravity="left"/>
+        </TableRow>
+
+        <TableRow
+            android:background="#E0E0E0">
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text=""
+                android:textSize="24sp"
+                android:gravity="left" />
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="24sp"
+                android:text="@string/kelvin"
+                android:gravity="left"/>
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

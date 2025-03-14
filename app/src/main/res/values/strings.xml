@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Entrega de QTA</string>
+    <string name="Titulo">Conversor de Unidades de Temperatura</string>
+    <string name="titulo">Conversor de Unidades de Temperatura</string>
+    <string name="celsius">°C</string>
+    <string name="farenheits">°F</string>
+    <string name="kelvin">°K</string>
+    <string name="valortitulo">VALOR</string>
+    <string name="unidad">Unidad</string>
+    <string name="valor">Valor</string>
+    <string name="texto_de_media">El conversor de unidades se usa introduciendo el valor numérico de temperatura en el campo “Valor”, y seleccionando la unidad con ayuda de los botones °C, °F o °K.</string>
+</resources>
